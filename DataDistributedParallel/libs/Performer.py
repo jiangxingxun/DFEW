@@ -185,7 +185,7 @@ class Performer():
         if self.args.tensorboard == True and self.args.local_rank==0:
             cmt    = "__fold#{fold}_lr#{lr}_bt#{bt}".format(fold = self.args.fold_idx,
                                                             lr   = self.args.lr_init,
-                                                            bt   = self.args.batch_size_tr)
+                                                            bt   = self.args.batch_size)
             writer = SummaryWriter(comment=cmt)
 
         WAR_TEST_MAX, UAR_TEST_MAX = 0.0, 0.0
