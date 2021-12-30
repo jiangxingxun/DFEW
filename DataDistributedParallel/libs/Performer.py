@@ -182,7 +182,7 @@ class Performer():
         ------------------
         Return: None
         '''
-        if self.args.tensorboard == True:
+        if self.args.tensorboard == True and self.args.local_rank==0:
             cmt    = "__fold#{fold}_lr#{lr}_bt#{bt}".format(fold = self.args.fold_idx,
                                                             lr   = self.args.lr_init,
                                                             bt   = self.args.batch_size_tr)
@@ -221,7 +221,7 @@ class Performer():
                 _, pre_tr  = torch.max(out_tr, 1)
                 pres_tr   += pre_tr.cpu().numpy().tolist()
                 trues_tr  += y_tr_s.cpu().numpy().tolist()
-                if self.args.tensorboard == True:  writer.add_scalar("loss_tr", loss_tr.data, step_tr)
+                if self.args.tensorboard == True and self.args.local_rank==0:  writer.add_scalar("loss_tr", loss_tr.data, step_tr)
 
             # Train: [3. Report]
             pres_tr, trues_tr = [[ele] for ele in pres_tr], [[ele] for ele in trues_tr]
