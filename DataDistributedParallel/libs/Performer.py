@@ -264,14 +264,16 @@ class Performer():
             
             # Save acc
             pth_fold = os.path.join(self.work_dir, "pth")
-            if not os.path.exists(pth_fold) and self.args.local_rank==0:
+            if not os.path.exists(pth_fold):
                 os.makedirs(pth_fold)
 
+            if self.args.local_rank==0:
                 pth_name = os.path.join(pth_fold,                         
-                                    "{model_name}_epo{epo}_WAR{WAR_te:.2f}_UAR{UAR_te:.2f}.pth".format(model_name = self.args.model_name,
-                                                                                                         epo        = epo, 
-                                                                                                         UAR_te     = UAR_te*100,
-                                                                                                         WAR_te     = WAR_te*100))
+                                    "{model_name}_fold{fold_idx}_epo{epo}_UAR{UAR_te:.2f}_WAR{WAR_te:.2f}.pth".format(model_name = self.args.model_name,
+                                                                                                                      fold_idx = self.args.fold_idx,
+                                                                                                                      epo      = str(epo).zfill(3), 
+                                                                                                                      UAR_te   = UAR_te*100,
+                                                                                                                      WAR_te   = WAR_te*100))
                 torch.save({
                     'seed'                 : self.seed,
                     'epo'                  : epo,
@@ -286,7 +288,7 @@ class Performer():
                     
                     
 
-                if self.args.txt_log     == True:  self.txt_log("[Test] epo:{epo}/{num_epoch}, batch_idx_tr:{idx_tr}/{len_train_dataloader}, WAR_te:{WAR_te:.2f}%, UAR_te:{UAR_te:.2f}%".format(epo          = epo+1,
+                if self.args.txt_log == True and self.args.local_rank==0:  self.txt_log("[Test] epo:{epo}/{num_epoch}, batch_idx_tr:{idx_tr}/{len_train_dataloader}, WAR_te:{WAR_te:.2f}%, UAR_te:{UAR_te:.2f}%".format(epo          = epo+1,
                                                                                                                                                                                                 num_epoch    = self.args.num_epoch,     
                                                                                                                                                                                                 idx_tr       = idx_tr+1,
                                                                                                                                                                                                 len_train_dataloader = len(self.train_dataloader),
