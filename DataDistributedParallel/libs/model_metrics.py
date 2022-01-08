@@ -1,4 +1,4 @@
-import sklearn
+import sklearn.metrics
 
 def get_WAR(trues_te, pres_te):
     WAR  = sklearn.metrics.accuracy_score(trues_te, pres_te)
