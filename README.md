@@ -36,7 +36,10 @@
 ## Pretrained Models
 - We provided the model's pretrained weights of each fold under 5-fold cross-validation protocol.
 
+- To get the better metrics, we provided the models trained by extracted frames from videos, other than those acquired by the [Time Interpolation Method](https://ieeexplore.ieee.org/document/6601598).
+
 - You can download the pretrained weights from [Baidu Disk](https://pan.baidu.com/s/1ys6bH3T3e-TrBwWye73PPQ) with Access Code (8azt) or [Google Driver](https://drive.google.com/drive/folders/11gVqH4WULvY_Gp-yHJTERdrzHukzsoIh?usp=sharing). 
+
 
 
 
