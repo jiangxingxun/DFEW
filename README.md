@@ -33,6 +33,18 @@
 
 - Step 2: run ```run.sh```
 
+## Pretrained Models
+- We provided the model's pretrained weights of each fold under 5-fold cross-validation protocol.
+
+- You can download the pretrained weights from [Baidu Disk](https://pan.baidu.com/s/1ys6bH3T3e-TrBwWye73PPQ) with Access Code (8azt) or [Google Driver](https://drive.google.com/drive/folders/11gVqH4WULvY_Gp-yHJTERdrzHukzsoIh?usp=sharing). 
+
+
+
+|model|ref|WAR(%)|UAR(%)|
+|:---|:---|:---|:---:|
+|r3d_18|[paper](https://openaccess.thecvf.com/content_cvpr_2018/papers/Tran_A_Closer_Look_CVPR_2018_paper.pdf)|55.70|45.11|
+|mc3_18|[paper](https://openaccess.thecvf.com/content_cvpr_2018/papers/Tran_A_Closer_Look_CVPR_2018_paper.pdf)|57.02|46.50|
+
 ## Citation
 ```txt
 @inproceedings{jiang2020dfew,
