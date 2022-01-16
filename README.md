@@ -42,7 +42,7 @@
 
 
 - you can download model by wget command like ```wget https://aip.seu.edu.cn/download/pretrained_model/DFEW/scratch/<model_name>/```, where <model_name> can be replaced with mc3_18, r3d_18, i3d ...
-- or you can download the pretrained weights from [Baidu Disk](https://pan.baidu.com/s/1ys6bH3T3e-TrBwWye73PPQ) with Access Code (8azt) or [Google Driver](https://drive.google.com/drive/folders/11gVqH4WULvY_Gp-yHJTERdrzHukzsoIh?usp=sharing). 
+[^_^]: or you can download the pretrained weights from [Baidu Disk](https://pan.baidu.com/s/1ys6bH3T3e-TrBwWye73PPQ) with Access Code (8azt) or [Google Driver](https://drive.google.com/drive/folders/11gVqH4WULvY_Gp-yHJTERdrzHukzsoIh?usp=sharing). >
 
 
 
