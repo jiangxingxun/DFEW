@@ -47,10 +47,11 @@
 
 
 
-|Model|Ref|WAR(%)|UAR(%)|
-|:---|:---|:---|:---:|
-|r3d_18|[paper](https://openaccess.thecvf.com/content_cvpr_2018/papers/Tran_A_Closer_Look_CVPR_2018_paper.pdf)|55.70|45.11|
-|mc3_18|[paper](https://openaccess.thecvf.com/content_cvpr_2018/papers/Tran_A_Closer_Look_CVPR_2018_paper.pdf)|57.02|46.50|
+|Model|Ref|WAR(%)|UAR(%)|Note|
+|:---|:---|:---|:---:|:---:|
+|r3d_18|[paper](https://openaccess.thecvf.com/content_cvpr_2018/papers/Tran_A_Closer_Look_CVPR_2018_paper.pdf)|55.70|45.11|-|
+|mc3_18|[paper](https://openaccess.thecvf.com/content_cvpr_2018/papers/Tran_A_Closer_Look_CVPR_2018_paper.pdf)|57.02|46.50|-|
+|i3d|[paper](https://openaccess.thecvf.com/content_cvpr_2017/papers/Carreira_Quo_Vadis_Action_CVPR_2017_paper.pdf)|59.24|47.61|I3D-RGB|
 
 ## Citation
 ```txt
