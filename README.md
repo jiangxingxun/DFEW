@@ -40,7 +40,10 @@
 
 - We take two metrics to evaluate models, i.e., WAR and UAR. WAR is the weighted average recall, i.e., accuracy; and UAR is the unweighted average recall, i.e., the accuracy per class divided by the number of classes without considerations of instances per class.
 
-- You can download the pretrained weights from [Baidu Disk](https://pan.baidu.com/s/1ys6bH3T3e-TrBwWye73PPQ) with Access Code (8azt) or [Google Driver](https://drive.google.com/drive/folders/11gVqH4WULvY_Gp-yHJTERdrzHukzsoIh?usp=sharing). 
+
+- you can download model by wget command like ```wget https://aip.seu.edu.cn/download/pretrained_model/<model_name:i3d>*```
+- or you can download the pretrained weights from [Baidu Disk](https://pan.baidu.com/s/1ys6bH3T3e-TrBwWye73PPQ) with Access Code (8azt) or [Google Driver](https://drive.google.com/drive/folders/11gVqH4WULvY_Gp-yHJTERdrzHukzsoIh?usp=sharing). 
+
 
 
 
