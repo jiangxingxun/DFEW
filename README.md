@@ -36,7 +36,7 @@
 ## Pretrained Models
 - We provided the model's pretrained weights of each fold under 5-fold cross-validation protocol.
 
-- To get the better metrics, we provided the models trained by extracted frames from videos, other than those acquired by the [Time Interpolation Method](https://ieeexplore.ieee.org/document/6601598).
+- To get the better metrics, we provided the models trained by extracted frames from videos, other than those acquired by the [Time Interpolation Method](https://ieeexplore.ieee.org/document/6601598) with matlab [code](https://github.com/jiangxingxun/TIM_oulu).
 
 - We take two metrics to evaluate models, i.e., WAR and UAR. WAR is the weighted average recall, i.e., accuracy; and UAR is the unweighted average recall, i.e., the accuracy per class divided by the number of classes without considerations of instances per class.
 
