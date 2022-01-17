@@ -17,6 +17,8 @@ import random
 import sklearn.metrics
 from tensorboardX import SummaryWriter
 from libs import model_metrics
+from libs import c3d, p3d, i3d
+from libs import Vgg11LSTM, ResLSTM
 
 import pdb
 
@@ -122,6 +124,12 @@ class Performer():
             if self.args.model_name == "r2plus1d_18": self.model = torchvision.models.video.resnet.r2plus1d_18(pretrained=self.args.model_pretrain)
             self.model.fc = nn.Linear(in_features=self.model.fc.in_features, out_features=self.args.num_classes)
 
+        if self.args.model_name == "c3d": self.model = c3d.C3D(num_classes=self.args.num_classes)
+        if self.args.model_name == "p3d": self.model = p3d.P3D63(num_classes=self.args.num_classes)
+        if self.args.model_name == "i3d": self.model = i3d.InceptionI3d(num_classes=self.args.num_classes)
+        if self.args.model_name == "vgglstm": self.model = Vgg11LSTM.vgg11_LSTM(num_classes=self.args.num_classes, video_frames=self.args.nframe)
+        if self.args.model_name == "reslstm": self.model = ResLSTM.resnet18_LSTM(num_classes=self.args.num_classes, video_frames=self.args.nframe)
+
         if self.args.model_init == True:
             for m in self.model.modules():
                 if isinstance(m, (nn.Conv2d, nn.Linear)):
@@ -170,8 +178,8 @@ class Performer():
         '''
         localtime = time.asctime(time.localtime(time.time()))
         string    = "[{localtime}] {string}".format(localtime=localtime, string=string)
-        if self.args.txt_log_toScreen == True: print(string)
-        if self.args.txt_log == True:
+        if self.args.local_rank==0 and self.args.txt_log_toScreen == True: print(string)
+        if self.args.local_rank==0 and self.args.txt_log == True:
             with open("{}/log.txt".format(self.work_dir),"a") as f:
                 print(string, file=f)
 
