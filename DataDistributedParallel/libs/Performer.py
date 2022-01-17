@@ -18,7 +18,7 @@ import sklearn.metrics
 from tensorboardX import SummaryWriter
 from libs import model_metrics
 from libs import c3d, p3d, i3d
-from libs import Vgg11LSTM, ResLSTM
+from libs import ResLSTM
 
 import pdb
 
@@ -127,7 +127,6 @@ class Performer():
         if self.args.model_name == "c3d": self.model = c3d.C3D(num_classes=self.args.num_classes)
         if self.args.model_name == "p3d": self.model = p3d.P3D63(num_classes=self.args.num_classes)
         if self.args.model_name == "i3d": self.model = i3d.InceptionI3d(num_classes=self.args.num_classes)
-        if self.args.model_name == "vgglstm": self.model = Vgg11LSTM.vgg11_LSTM(num_classes=self.args.num_classes, video_frames=self.args.nframe)
         if self.args.model_name == "reslstm": self.model = ResLSTM.resnet18_LSTM(num_classes=self.args.num_classes, video_frames=self.args.nframe)
 
         if self.args.model_init == True:
