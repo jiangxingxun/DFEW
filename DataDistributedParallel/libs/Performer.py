@@ -3,6 +3,8 @@ import time
 import yaml
 
 from libs import DFEW_Dataset
+from makemodel import c3d, p3d, i3d
+from makemodel import ResLSTM
 
 import torch
 from torch.utils.data import DataLoader
