@@ -3,6 +3,7 @@ import time
 import yaml
 
 from libs import DFEW_Dataset
+from libs import model_metrics
 from makemodel import c3d, p3d, i3d
 from makemodel import ResLSTM
 
@@ -18,9 +19,7 @@ import random
 
 import sklearn.metrics
 from tensorboardX import SummaryWriter
-from libs import model_metrics
-from makemodel import c3d, p3d, i3d
-from makemodel import ResLSTM
+
 
 import pdb
 
