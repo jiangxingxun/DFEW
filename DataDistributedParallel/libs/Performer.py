@@ -17,8 +17,8 @@ import random
 import sklearn.metrics
 from tensorboardX import SummaryWriter
 from libs import model_metrics
-from libs import c3d, p3d, i3d
-from libs import ResLSTM
+from makemodel import c3d, p3d, i3d
+from makemodel import ResLSTM
 
 import pdb
 
