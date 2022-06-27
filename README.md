@@ -2,6 +2,13 @@
 
 *Xingxun Jiang, Yuan Zong, Wenming Zheng, Chuangao Tang, Wanchuang Xia, Cheng Lu, Jiateng Liu "[DFEW: A Large-Scale Database for Recognizing Dynamic Facial Expressions in the Wild](https://dl.acm.org/doi/10.1145/3394171.3413620)". ACM MM'20*
 
+[[Paper](https://github.com/jiangxingxun/jiangxingxun.github.io/blob/master/papers/DFEW/jiang_DFEW.pdf)/[中文版](https://github.com/jiangxingxun/jiangxingxun.github.io/blob/master/papers/DFEW/jiang_DFEW_CN.pdf)]
+[Download DFEW](https://dfew-dataset.github.io/)
+[PPT](https://github.com/jiangxingxun/jiangxingxun.github.io/blob/master/papers/DFEW/jiang_DFEW_ppt.pdf)
+[poster](https://github.com/jiangxingxun/jiangxingxun.github.io/blob/master/papers/DFEW/jiang_DFEW_poster.pdf)
+[video](https://dl.acm.org/doi/10.1145/3394171.3413620)
+
+
 ## Requirements
 - Python == 3.6.0
 - PyTorch == 1.8.0
